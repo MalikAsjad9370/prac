@@ -102,7 +102,7 @@ def huffman_decode(bitstring, root):
 
 # Example usage
 if __name__ == "__main__":
-    sample = "this is an example for huffman encoding"
+    sample = input("Enter text to encode using Huffman Coding: ")
     encoded, codes, tree = huffman_encode(sample)
     decoded = huffman_decode(encoded, tree)
 
@@ -117,3 +117,4 @@ if __name__ == "__main__":
     print("\nEncoded bitstring (first 200 bits):", encoded[:200] + ("..." if len(encoded) > 200 else ""))
     print(f"Total bits: {len(encoded)}")
     print("Decoded equals original?", decoded == sample)
+
